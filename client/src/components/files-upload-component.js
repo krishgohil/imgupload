@@ -25,7 +25,7 @@ export default class FilesUploadComponent extends Component {
         const formData = new FormData()
         formData.append('profileImg', this.state.profileImg)
         console.log(formData)
-        axios.post("http://localhost:4000/api/user-profile", formData, {
+        axios.post("https://imguploadmdb.herokuapp.com/api/user-profile", formData, {
         }).then(res => {
             
             console.log(res,formData)
