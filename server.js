@@ -6,7 +6,8 @@ let express = require('express'),
 
 const dotenv = require('dotenv')
 
-const api = require('../backend/routes/user.routes')
+const api = require('./routes/user.routes')
+// const api = require('../backend/routes/user.routes')
 dotenv.config({ path: "./config.env" })
 
 // MongoDB Configuration
