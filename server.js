@@ -35,6 +35,11 @@ app.use('/public', express.static('public'));
 
 app.use('/api', api)
 
+
+if(process.env.NODE_ENV == "production"){
+    app.use(express.static("client/build"))
+}
+
 const port = process.env.PORT || 4000;
 const server = app.listen(port, () => {
     console.log('Connected to port ' + port)
